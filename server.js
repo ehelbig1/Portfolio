@@ -16,7 +16,7 @@ app.use(express.static(__dirname + '/public'));
 app.use('/api', appRoutes);
 
 //establishes connection to DB, the function confirms connection
-mongoose.connect('mongodb://localhost:27017/app2', function(err){
+mongoose.connect('mongodb://heroku_pms48n0c:4k18l4jn7kbuaqiq4qa9n0q1us@ds117821.mlab.com:17821/heroku_pms48n0c', function(err){
     if(err){
         console.log('Not connected to DB ' + err);
     }else{
