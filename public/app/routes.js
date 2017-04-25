@@ -55,8 +55,6 @@ app.run(['$rootScope', 'Auth', '$location', function($rootScope, Auth, $location
                 event.preventDefault();
                 $location.path('/');
             }
-        }else{
-            console.log('authenticated does not matter');
         }
     })
 }])

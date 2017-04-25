@@ -1,5 +1,5 @@
 body{
-    background: rgb(100, 100, 130);
+    background-image: url('http://bgfons.com/upload/stucco_texture2042.jpg');
 }
 
 main{
@@ -38,16 +38,14 @@ header .navbar{
 }
 
 #myCarousel{
-    margin-bottom: 10px;
-    box-shadow: 10px 5px 5px rgba(100, 100, 100, .4)
+    margin-bottom: 20px;
+    box-shadow: 10px 5px 5px rgba(100, 100, 100, .4);
+    margin: auto;
+    height: 500px;
+    margin-bottom: 20px;
 }
 
-.carousel-caption{
-    background: rgba(100, 100, 150, .6);
-    height: auto;
-    width: 40%;
-    padding: 5px 5ps 10px 5px;
+.sliderPic{
     margin: auto;
-    border-radius: 5px;
-    box-shadow: 10px 5px 5px rgba(100, 100, 100, .4);
+    margin-top: 20px;
 }
