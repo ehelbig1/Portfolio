@@ -10,7 +10,7 @@ angular.module('userControllers', ['userServices'])
         User.create(app.regData).then(function(data){
             if(data.data.success){
                 app.loading = false;
-                app.successMsg = data.data.message + "...redirecting";
+                app.succesMsg = data.data.message + "...redirecting";
                 $timeout(function(){
                     $location.path('/');
                 }, 2000);

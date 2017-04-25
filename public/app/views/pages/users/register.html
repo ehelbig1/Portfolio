@@ -3,7 +3,17 @@
         <h1>User Registration</h1>
     </div>
 
-    <form ng-submit="register.regUser(regData);">
+    <form name='regForm' ng-submit="register.regUser(regData);" novalidate>
+        <div ng-class="{'has-success':(regForm.name.$valid && !regForm.name.$pristine), 'has-error':(!regForm.name.$valid && !regForm.name.$pristine) || (!regForm.name.$valid && regForm.$submitted)}">
+            <!-- Name -->
+            <label>Name</label>
+            <input class="form-control" type="text" name="name" placeholder="Name" ng-model="register.regData.name" ng-pattern="/^(([a-zA-Z]{2,30})+[ ]+([a-zA-Z]{2,30})+)+$/" ng-minlength="2" ng-maxlength="40" required>
+            <p class="help-block" ng-show="(!regForm.$pristine && regForm.name.$error.required) || (regForm.$submitted && regForm.name.$error.required)">This field is required.</p>
+            <ul ng-show="(!regForm.$pristine && regForm.name.$error.pattern) || (!regForm.name.$pristine && regForm.name.$error.minlength) || (!regForm.name.$pristine && regForm.name.$error.maxlength)">
+                <li>Please provide name in standard format, eg. John Doe.</li>
+            </ul>
+        </div>
+        <br>
         <!-- Email -->
         <label>Email</label>
         <input class="form-control" type="text" name="email" placeholder="Email" ng-model="register.regData.email">
