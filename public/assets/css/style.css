@@ -49,3 +49,8 @@ header .navbar{
     margin: auto;
     margin-top: 20px;
 }
+
+footer{
+    width: 95%;
+    margin: auto;
+}
