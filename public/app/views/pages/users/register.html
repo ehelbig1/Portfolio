@@ -42,9 +42,9 @@
         <input class="form-control" type="password" name="password" placeholder="Password" ng-model="register.regData.password" ng-pattern="/^(?=.*?[a-zA-Z])(?=.*?[\d])(?=.*?[\W]).{8,16}$/" ng-minlength="8" ng-maxlength="16" required>
             <p class="help-block" ng-show="(!regForm.password.$pristine && regForm.password.$error.required) || (regForm.$submitted && regForm.password.$error.required)">This field is required.</p>
             <ul ng-show="(!regForm.$pristine && regForm.password.$error.pattern) || (!regForm.password.$pristine && regForm.password.$error.minlength) || (!regForm.password.$pristine && regForm.password.$error.maxlength)">
-                <li>Must be between 3 and 30 characters</li>
-                <li>Can contain letters and numbers</li>
-                <li>Cannot contain spaces or special characters</li>
+                <li>Must be between 8 and 16 characters</li>
+                <li>Can contain both upper and lower case letters.</li>
+                <li>Must contain atleast 1 number and 1 special character.</li>
             </ul> 
         </div>
         <br>
